@@ -13,23 +13,23 @@
     <div class="container">
 
         <div class="row">
-            @foreach ($motos as $index => $article)
+            @foreach ($motos as $index => $moto)
                 <div class="col-md-4">
                     <div class="card card-body">
-                        {{--  si vous voulez avoir le titre de votre données cliquable (ici c'est le titre de l'article) utiliser le bout de code ci-bas>    
+                        {{--  si vous voulez avoir le titre de votre données cliquable (ici c'est le titre de l'moto) utiliser le bout de code ci-bas>    
                {{--  <a href="{{ url('motos/'. $moto->id) }}">
                 <h2>
-                        {{ $article->title }}
+                        {{ $moto->title }}
                     </h2>
                    
                 </a>  --}}
                         <h2>
-                            {{ $article->title }}
+                            {{ $moto->title }}
                         </h2>
-                        @if ($article->photo)
+                        @if ($moto->photo)
                             <img src="../images/upload/{{ $moto->photo }}" class="card-img-top img-fluid">
                         @endif
-                        {{-- {{ $article->content }} --}}
+                        {{-- {{ $moto->content }} --}}
                         <div class="col-md-6">
                             <a href="{{ url('motos/' . $moto->id) }}"
                                 class="btn btn-outline-primary">@lang('general.Savoir')</a>
